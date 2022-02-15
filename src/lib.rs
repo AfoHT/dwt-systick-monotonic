@@ -39,7 +39,7 @@ impl<const TIMER_HZ: u32> DwtSystick<TIMER_HZ> {
     /// `TIMER_HZ`) can be compared.
     #[inline(always)]
     pub fn new(dcb: &mut DCB, mut dwt: DWT, mut systick: SYST, sysclk: u32) -> Self {
-        assert!(TIMER_HZ == sysclk);
+        //assert!(TIMER_HZ == sysclk);
 
         dcb.enable_trace();
         DWT::unlock();
